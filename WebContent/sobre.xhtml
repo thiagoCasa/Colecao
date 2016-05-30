@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Grupo</title>
+</h:head>
+
+<body>
+<ui:debug hotkey="x" rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}"/>
+
+<div id="content" align="center">
+  <ui:insert name="content">
+  <h:form id="form">
+  	<h:panelGrid columns="1">
+      	<h:outputLabel>Claudia Carvalho</h:outputLabel>
+    	<h:outputLabel>Rogerio Andrade</h:outputLabel>
+    	<h:outputLabel>Thiago Casa</h:outputLabel>
+    	
+    	<h:commandButton value="Voltar" action="principal"></h:commandButton>
+    </h:panelGrid>
+    </h:form>
+  </ui:insert>
+</div>
+
+</body>
+
+</html>

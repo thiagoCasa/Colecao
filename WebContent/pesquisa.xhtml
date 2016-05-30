@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Catalogo</title>
+</h:head>
+
+<body>
+<div align="center">
+<h2>Catalogo de Livros</h2>
+<h:form id="form">
+	
+	<h:outputText value="Não há livros cadastrados"
+			rendered="#{livroMB.lista.size()==0}" />
+		<h:dataTable value="#{livroMB.lista}" var="l" border="2"
+			rendered="#{livroMB.lista.size()>0}">
+
+<!-- 			<h:column> -->
+<!-- 				#{l.id} -->
+<!-- 				<f:facet name="header">Id</f:facet> -->
+<!-- 			</h:column> -->
+			<h:column>
+				#{l.titulo}
+				<f:facet name="header">Titulo</f:facet>
+			</h:column>
+			<h:column>
+				#{l.autor}
+				<f:facet name="header">Autor</f:facet>
+			</h:column>
+			<h:column>
+				#{l.descricao}
+				<f:facet name="header">Descrição</f:facet>
+			</h:column>
+			<h:column>
+				#{l.editora}
+				<f:facet name="header">Editora</f:facet>
+			</h:column>
+			<h:column>
+				#{l.preco}
+				<f:facet name="header">Preço</f:facet>
+			</h:column>
+		</h:dataTable>
+	<h:commandButton value="Voltar" action="principal"></h:commandButton>
+</h:form>
+</div>
+
+</body>
+
+</html>

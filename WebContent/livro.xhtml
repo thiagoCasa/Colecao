@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Minha Coleção de Livros</title>
+</h:head>
+
+<body>
+	<!-- <img src="Rover.gif" alt="My Dog" -->
+	<!-- width="400" height="300"/> -->
+
+	<h:form id="form">
+		<div align="center">
+			<h:panelGrid columns="3">
+				<h:outputText value="Título"></h:outputText>
+				<h:inputText value="#{livroMB.livro.titulo}" id="txtTitulo"></h:inputText>
+				<h:message for="txtTitulo"></h:message>
+
+				<h:outputText value="Autor"></h:outputText>
+				<h:inputText value="#{livroMB.livro.autor}" id="txtAutor"></h:inputText>
+				<h:message for="txtAutor"></h:message>
+
+				<h:outputText value="Descrição"></h:outputText>
+				<h:inputText value="#{livroMB.livro.descricao}" id="txtDescricao"></h:inputText>
+				<h:message for="txtDescricao"></h:message>
+
+				<h:outputText value="Editora"></h:outputText>
+				<h:inputText value="#{livroMB.livro.editora}" id="txtEditora"></h:inputText>
+				<h:message for="txtEditora"></h:message>
+
+				<h:outputText value="Preço"></h:outputText>
+				<h:inputText value="#{livroMB.livro.preco}" id="txtPreco"></h:inputText>
+				<h:message for="txtPreco"></h:message>
+
+				<h:commandButton value="Adicionar" action="#{livroMB.adicionar}"></h:commandButton>
+				<h:commandButton value="Pesquisar" action="pesquisa"></h:commandButton>
+				<h:commandButton value="Voltar" action="principal"></h:commandButton>
+			</h:panelGrid>
+		</div>
+	</h:form>
+</body>
+
+</html>
